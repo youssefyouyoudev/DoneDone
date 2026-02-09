@@ -1,0 +1,12 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="accent" x1="12" y1="12" x2="108" y2="108" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C6BFF" />
+      <stop offset="1" stop-color="#4F8BFF" />
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="104" height="104" rx="28" fill="url(#accent)" />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M24 26c0-6.627 5.373-12 12-12h24c18.778 0 34 15.222 34 34s-15.222 34-34 34H36c-6.627 0-12-5.373-12-12V26Zm12-4a4 4 0 0 0-4 4v56a4 4 0 0 0 4 4h24c16.569 0 30-13.431 30-30S76.569 26 60 26H36Z" fill="#0E1116" fill-opacity="0.12" />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M28 30c0-6.627 5.373-12 12-12h20c18.778 0 34 15.222 34 34s-15.222 34-34 34H40c-6.627 0-12-5.373-12-12V30Zm12-4a4 4 0 0 0-4 4v48a4 4 0 0 0 4 4h20c16.569 0 30-13.431 30-30S76.569 26 60 26H40Z" fill="#F7F8FB" />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M56 30c0-6.627 5.373-12 12-12h20c18.778 0 34 15.222 34 34s-15.222 34-34 34H68c-6.627 0-12-5.373-12-12V30Zm12-4a4 4 0 0 0-4 4v48a4 4 0 0 0 4 4h20c16.569 0 30-13.431 30-30S104.569 26 88 26H68Z" fill="#0E1116" />
+</svg>
