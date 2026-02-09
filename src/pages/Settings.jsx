@@ -4,7 +4,7 @@ import { useTheme } from '../context/ThemeContext'
 import { selectTasksSorted } from '../store/tasksSlice'
 
 export default function Settings() {
-  const { theme } = useTheme()
+  const { theme, accent, accents, setAccent } = useTheme()
   const tasks = useSelector(selectTasksSorted)
 
   return (
@@ -23,6 +23,25 @@ export default function Settings() {
             <p className="eyebrow">Theme</p>
             <p className="strong">{theme === 'dark' ? 'Dark' : 'Light'} mode</p>
             <p className="muted">Stored locally so the app opens the way you left it.</p>
+          </div>
+          <div>
+            <p className="eyebrow">Accent</p>
+            <p className="muted">Pick your highlight color. Stored in localStorage.</p>
+            <div className="accent-grid">
+              {Object.entries(accents).map(([key, palette]) => (
+                <button
+                  key={key}
+                  className={`accent-swatch ${accent === key ? 'accent-swatch--active' : ''}`}
+                  style={{ '--swatch-accent': palette.accent, '--swatch-strong': palette.accentStrong }}
+                  onClick={() => setAccent(key)}
+                  aria-label={`Use ${key} accent`}
+                  type="button"
+                >
+                  <span className="accent-swatch__dot" />
+                  <span className="accent-swatch__label">{key}</span>
+                </button>
+              ))}
+            </div>
           </div>
           <div>
             <p className="eyebrow">Data</p>

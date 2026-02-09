@@ -452,6 +452,45 @@ textarea {
   gap: 12px;
 }
 
+.accent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.accent-swatch {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--panel-strong);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  color: var(--text-strong);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.accent-swatch__dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--swatch-accent);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--swatch-accent) 18%, transparent);
+}
+
+.accent-swatch__label {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.accent-swatch--active {
+  border-color: var(--swatch-strong);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--swatch-accent) 24%, transparent);
+  transform: translateY(-2px);
+}
+
 .modal-backdrop {
   position: fixed;
   inset: 0;

@@ -55,7 +55,8 @@ DoneDone is a modern productivity app built with React, Vite, Redux Toolkit, and
 
 ## 🎨 Theming
 - Light/Dark modes with sun/moon toggle (fixed bottom-right)
-- Theme choice stored in localStorage; applies instantly across routes
+- Accent color picker (grape, ocean, amber, emerald, rose) saved to localStorage
+- Theme + accent apply instantly across routes
 
 ## 📂 Project Structure (key folders)
 - `src/pages` – Landing, Dashboard, Tasks, Board, Settings
