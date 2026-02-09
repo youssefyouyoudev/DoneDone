@@ -1,17 +1,75 @@
-# React + Vite
+# DoneDone – Smart To-Do 2.0 🧠✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DoneDone is a modern productivity app built with React, Vite, Redux Toolkit, and DnD + charts. It feels like a lightweight SaaS: landing page, dashboard analytics, Kanban, smart filters, and a polished light/dark experience.
 
-Currently, two official plugins are available:
+## 🚀 Feature Highlights
+- 📌 Multi-view app: Landing, Dashboard, Tasks list, Kanban Board, Settings
+- 🏷️ Tags + priorities (high/medium/low) with filters and search
+- 🖱️ Drag-and-drop Kanban columns (To Do / In Progress / Done)
+- 📊 Weekly stats (created vs completed) and smart “due today” insights
+- 💾 Persistence via localStorage; Redux Toolkit state + middleware
+- 🎨 Light/Dark themes with floating sun/moon toggle (always visible)
+- 🧭 Client-side routing (react-router) so reloads keep your page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🗺️ Routes
+| Path | Purpose |
+| --- | --- |
+| `/` | Landing page with CTA |
+| `/dashboard` | Analytics + focus queue + quick add |
+| `/tasks` | Full CRUD list with filters/search |
+| `/board` | Kanban drag-and-drop view |
+| `/settings` | Theme and data snapshot |
 
-## React Compiler
+## 🛠️ Tech Stack
+- React + Vite
+- Redux Toolkit + React Redux
+- React Router
+- @dnd-kit/core (drag & drop)
+- Recharts (analytics)
+- CSS (custom design system, light/dark)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📥 Setup (beginner-friendly)
+1) Install Node.js (LTS). On Windows PowerShell, allow install command for this session:
+	```powershell
+	Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+	npm install
+	```
+2) Start the dev server:
+	```powershell
+	npm run dev
+	```
+3) Open the shown local URL in your browser. Use the floating theme toggle (bottom-right) anytime.
 
-## Expanding the ESLint configuration
+## 🧩 Core Concepts (simple)
+- **Tasks**: title, description, tags, priority, status, due date, completedAt
+- **Filters**: search in title/description, tag selection, priority dropdown
+- **Drag & Drop**: move tasks across columns; dropping in Done also completes
+- **Persistence**: Redux middleware saves tasks to localStorage automatically
+- **Analytics**: Weekly creation vs completion chart + completion rate
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# DoneDone" 
+## 🔧 Scripts
+- `npm run dev` – start Vite dev server
+- `npm run build` – production build
+- `npm run preview` – preview build locally
+- `npm run lint` – lint with ESLint
+
+## 🎨 Theming
+- Light/Dark modes with sun/moon toggle (fixed bottom-right)
+- Theme choice stored in localStorage; applies instantly across routes
+
+## 📂 Project Structure (key folders)
+- `src/pages` – Landing, Dashboard, Tasks, Board, Settings
+- `src/components` – Task cards, board, filters, stats, modals, theme toggle
+- `src/store` – Redux store and task slice
+- `src/services` – localStorage helpers
+
+## ✅ Using the App
+1) Go to `/dashboard` or `/tasks` and add a task (title required).
+2) Tag it, set priority, and due date if needed.
+3) Drag tasks on `/board` to update status, or click Complete/Edit/Delete on cards.
+4) Check `/settings` for theme and data count; review charts on `/dashboard`.
+
+## 🔒 License / Rights
+© 2026 DoneDone. All rights reserved.
+
+Enjoy building and shipping with DoneDone! 🎯
